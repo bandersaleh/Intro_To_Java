@@ -13,27 +13,29 @@ import java.util.ArrayList;
 import static java.lang.System.out;
 
 // New Class
-public class Player {
+public class Team {
 
     // Fields
-    private String Name;
-    private int Number;
+    private String teamName;
+    private ArrayList<Player> players;
 
     // Constructors
-    public Player(String playerName, int playerNumber){
-        this.Name = playerName;
-        this.Number = playerNumber;
+    public Team(String name) {
+        this.teamName = name;
+        this.players = new ArrayList<>();
     }
 
     // Properties
-    public String playerName() {
-        return Name;
+    public String getName() {
+        return teamName;
     }
-    public int playerNumber() {
-        return Number;
+    public ArrayList<Player> getPlayers() {
+        return players;
     }
 
-
-
+    // Methods
+    public void addPlayer(Player player) {
+        players.add(player);
+    }
 
 }
